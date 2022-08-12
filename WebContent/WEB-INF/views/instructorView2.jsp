@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+ pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="UTF-8">
+    <title>Instructor</title>
+ </head>
+ <body>
+ 
+    <jsp:include page="_header.jsp"></jsp:include>
+    <jsp:include page="_menu2.jsp"></jsp:include>
+ 
+    <h3>Instructor Info</h3>
+ 
+    <p style="color: red;">${errorString}</p>
+ 
+    <table border="1" cellpadding="5" cellspacing="1" >
+       <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Room</th>
+          <th>Phone</th>
+       </tr>
+          <tr>
+             <td>${Instructor.firstName} ${Instructor.lastName}</td>
+             <td>${Instructor.email}</td>
+             <td>${Instructor.room}</td>
+             <td>${Instructor.phone}</td>
+          </tr>
+    </table>
+ 	<a href="#" onclick="history.go(-1)">Go Back</a>
+   <!-- <a href="searchListView.jsp">Back to Courses</a>-->
+
+    <jsp:include page="_footer.jsp"></jsp:include>
+ 
+ </body>
+</html>
